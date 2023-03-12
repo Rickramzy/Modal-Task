@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link type="text/css" rel="stylesheet" href="./style.css">
+    <title>Modal</title>
+</head>
+
+<body>
+    <section class="modal-container">
+        <div class="modal-interior">
+            <div class="order-modal">
+                <h3>Package Order Completed?</h3>
+                <a href="#open-modal"><button>Pay Here</button></a>
+            </div>
+        </div>
+        <div id="open-modal" class="modal-window">
+
+            <div class="content">
+                <div class="head">
+                    <h3>Edit payment method</h3>
+                    <a href="#" title="close" class="modal-close">
+                        <button><i class="fa-sharp fa-solid fa-x"></i></button>
+                    </a>
+                </div>
+                <form>
+                    <div class="card-holder">
+                        <label>Card holder*</label>
+                        <input type="text" required="true">
+                    </div>
+                    <label>Credit/debit card number*</label>
+                    <div class="master-card-number">
+                        <input type="number" required="true" class="card-number">
+                        <button><img src="./asset/image/icons8-mastercard-logo-48.png"></button>
+                    </div>
+                    <div class="expire">
+                        <div>
+                            <label>Expiration month and year*</label>
+                            <input type="text" required="true">
+                        </div>
+                        <div>
+                            <label>CVV*</label>
+                            <input type="number" required="true">
+                        </div>
+                    </div>
+                </form>
+                <div class="last-part">
+                    <p>*This field is mandatory</p>
+                    <a href="#" title="cancel" class="modal-cancel">
+                        <button class="button1">Cancel</button>
+                    </a>
+                    <button class="button2">Update</button>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+
+</html>

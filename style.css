@@ -1,0 +1,264 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-x: auto;
+    background-color: #888888;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./asset/image/cardmapr-nl-s8F8yglbpjo-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-interior {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    background-position: right bottom;
+    transition: all 0.5s ease;
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 1rem;
+    border: 1px solid #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal-interior button {
+    border: 1px solid #5bc0de;
+    border-radius: 0.5rem;
+    background-color: #5bc0de;
+    width: 6rem;
+    height: 2rem;
+    color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 1rem;
+}
+
+.modal-window {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 999;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.modal-window:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal-window > div {
+    background-color: #ffffff;
+    background-position: right bottom;
+    transition: all 0.5s ease;
+    border-radius: 1rem;
+    border: 1px solid #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 2em;
+    max-width: 400px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.modal-window div:not(:last-of-type) {
+    margin-bottom: 15px;
+}
+
+
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.modal-close:hover {
+    color: #000000;
+}
+.modal-close {
+    text-decoration: none;
+    font-size: 80%;
+    width: 70px;
+    text-align: right;
+}
+.head button {
+    border-radius: 0.2rem;
+    border: none;
+}
+.fa-sharp {
+    padding: 4px;
+    font-weight: bold;
+}
+.content form {
+    display: block;
+}
+.content label {
+    color: #A4A2A7;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.content input {
+    border: 1px solid #A4A2A7;
+    border-radius: 0.3rem;
+    height:2rem;
+    width: 21rem;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+}
+
+input:hover {
+    outline: 2px solid green;
+} 
+
+input:focus {
+outline: none;
+}
+
+.card-holder {
+    display: block;
+}
+
+.card-holder input:hover {
+    outline: 2px solid green;
+} 
+
+.master-card-number {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #A4A2A7;
+    border-radius: 0.3rem;
+    height: 2rem;
+    width: 21rem;
+    margin-bottom: 1rem;
+}
+
+/* .card-number {
+    border: none;
+} */
+.master-card-number input {
+    border: none;
+    margin-bottom: 2rem; 
+    background-color: transparent;
+}
+.master-card-number img {
+    height: 3vh;
+    width: 3vh;
+    float: right;
+    padding: 0.1rem;
+}
+
+.master-card-number button {
+    border-radius: 0.2rem;
+    border: none;
+    height: 3vh;
+    width: 4vh;
+    margin: 0.3rem;
+}
+.expire {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+.expire input {
+    height: 4.6vh;
+    width: 10rem;
+}
+
+.last-part {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+}
+.last-part p {
+    color: #A4A2A7;
+    font-size: 12px;
+    font-weight: 700;
+}
+.button1 {
+    border-radius: 1.5rem;
+    border: 1px solid #A4A2A7;
+    font-weight: 600;
+    height: 5vh;
+    width: 4rem;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.button1:hover {
+    background-color: dimgray;
+    color: #ffffff;
+}
+.button2 {
+    border-radius: 1.5rem;
+    border: 1px solid #A4A2A7;
+    font-weight: 600;
+    height: 5vh;
+    width: 7rem;
+    text-align: center;
+    background-color: #1E082C;
+    color: #ffffff;
+}
+
+.button2:hover {
+    background-color: green;
+    color:#ffffff;
+}
+
+/*Media query*/
+@media only screen and (max-width: 421px) {
+    .modal-window > div {
+        max-width: 93%;
+        padding: 2rem 1rem;
+    }
+
+    .card-holder input {
+        width: 22.2rem;
+    }
+
+    .master-card-number {
+        width: 22.2rem;
+    }
+
+    /* .modal-interior button {
+    border: 1px solid #5bc0de;
+    border-radius: 0.5rem;
+    background-color: #5bc0de;
+    width: 6rem;
+    height: 3vh;
+    color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 1rem;
+} */
+}
