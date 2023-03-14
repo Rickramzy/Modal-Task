@@ -189,6 +189,7 @@ outline: none;
     justify-content: space-between;
     margin-bottom: 1.5rem;
 }
+
 .expire input {
     height: 4.6vh;
     width: 10rem;
@@ -248,17 +249,49 @@ outline: none;
     .master-card-number {
         width: 22.2rem;
     }
+}
+@media only screen and (max-width: 375px) {
+    .card-holder input {
+        width: 20rem;
+    }
 
-    /* .modal-interior button {
-    border: 1px solid #5bc0de;
-    border-radius: 0.5rem;
-    background-color: #5bc0de;
-    width: 6rem;
-    height: 3vh;
-    color: #ffffff;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-top: 1rem;
-} */
+    .master-card-number {
+        width: 20rem;
+    }
+
+    .modal-interior {
+    width: 90%;
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    .card-holder input {
+        width: 17rem;
+    }
+
+    .master-card-number {
+        width: 17rem;
+    }
+
+    .modal-interior {
+    /* width: 90%; */
+    }
+
+    .order-modal h3 {
+        font-size: 10px;
+    }
+    .expire input {
+        height: 4.6vh;
+        width: 8rem;
+    }
+
+    .content label {
+        color: #A4A2A7;
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+    .last-part p {
+        font-size: 8px;
+    }
 }
